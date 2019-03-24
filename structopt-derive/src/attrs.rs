@@ -369,7 +369,7 @@ impl Attrs {
     pub fn from_struct(attrs: &[Attribute], name: String, argument_casing: CasingStyle) -> Attrs {
         let mut res = Self::new(name, argument_casing);
         let attrs_with_env = [
-            ("version", "CARGO_PKG_VERSION"),
+            ("version", "VERGEN_SEMVER_LIGHTWEIGHT"),
             ("about", "CARGO_PKG_DESCRIPTION"),
             ("author", "CARGO_PKG_AUTHORS"),
         ];
